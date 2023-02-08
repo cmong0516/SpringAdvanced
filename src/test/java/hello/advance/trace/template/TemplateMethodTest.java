@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Test;
 
 @Slf4j
 public class TemplateMethodTest {
+    // 현재까지의 코드를 보면 핵심 기능에 부가기능을 추가하고 있다.
+    // 그런데 부가기능을 위한 코드가 핵심 기능의 코드보다 더 많은것같다.
+    // 또 부가기능 코드에 동일한 패턴이 존재한다.
 
     @Test
     void templateMethodV0() {
