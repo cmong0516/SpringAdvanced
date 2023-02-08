@@ -29,6 +29,33 @@ public class HelloTraceV1Test {
         // begin 에 String hello 를 입력하면 TraceId 생성하고 level 수만큼 StringBuilder 에 prefix 를 추가한다.
 
         TraceStatus status = trace.begin("hello");
+
+//        public void end(TraceStatus status) {
+//            complete(status, null);
+//        }
+
+        // hello 를 받은 TraceStatus 는 traceId, startTimeMs ,hello
+
+//
+//        private void complete(TraceStatus status, Exception e) {
+//            Long stopTimeMs = System.currentTimeMillis();
+//            long resultTimeMs = stopTimeMs - status.getStartTimeMs();
+//            TraceId traceId = status.getTraceId();
+//            if (e == null) {
+//                log.info("[{}] {}{} time={}ms", traceId.getId(),
+//                        addSpace(COMPLETE_PREFIX, traceId.getLevel()), status.getMessage(),
+//                        resultTimeMs);
+//            } else {
+//                log.info("[{}] {}{} time={}ms ex={}", traceId.getId(),
+//                        addSpace(EX_PREFIX, traceId.getLevel()), status.getMessage(), resultTimeMs,
+//                        e.toString());
+//            }
+//        }
+
+        // complete 메서드로 종료시간과 소요시간을 계산
+        // exception 이 발생하지 않았다면 traceId 와 message , resultTime 로그
+        // exception 이 발생했다면 exception 까지 출력.
+
         trace.end(status);
     }
 
@@ -37,5 +64,6 @@ public class HelloTraceV1Test {
         HelloTraceV1 trace = new HelloTraceV1();
         TraceStatus status = trace.begin("hello");
         trace.exception(status, new IllegalStateException());
+        // exception 까지 출력한것이 begin_exception
     }
 }
