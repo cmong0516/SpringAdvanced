@@ -43,6 +43,8 @@ public class TemplateMethodTest {
         template1.execute();
         AbstractTemplate template2 = new SubClassLogic2();
         template2.execute();
+
+        // SubClassLogic 에서 call 메서드를 재정의 하여 execute 메서드 내에서 실행한다.
     }
 
     @Test
