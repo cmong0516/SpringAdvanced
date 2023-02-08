@@ -15,6 +15,8 @@ public class ContextV2Test {
         ContextV2 contextV2 = new ContextV2();
         contextV2.execute(new StrategyLogic1());
         contextV2.execute(new StrategyLogic2());
+
+        // Strategy 를 execute 메서드의 인자로 받아 실행한다.
     }
 
     @Test
@@ -36,5 +38,7 @@ public class ContextV2Test {
 //            }
 //        });
         contextV2.execute(() -> log.info("비지니스 로직 2 실행"));
+
+        // 람다식을 활용하여 execute 메서드의 인자로 전달.
     }
 }

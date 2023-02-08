@@ -44,6 +44,8 @@ public class ContextV1Test {
         ContextV1 contextV2 = new ContextV1(strategyLogic2);
 
         contextV2.execute();
+
+        // ContextV1 은 생성자로 Strategy 를 주입받아 실행
     }
 
     @Test
@@ -70,6 +72,8 @@ public class ContextV1Test {
 
         ContextV1 contextV2 = new ContextV1(strategyLogic2);
         contextV2.execute();
+
+        // 익명 내부 클래스로 Strategy 를 생성할수도 있다.
     }
 
     @Test
@@ -92,6 +96,8 @@ public class ContextV1Test {
             }
         });
         contextV2.execute();
+
+        // 익명 내부 클래스를 활용하여 ContextV1 인자에서 바로 생성
     }
 
     @Test
@@ -102,5 +108,8 @@ public class ContextV1Test {
 
         ContextV1 contextV2 = new ContextV1(() -> log.info("비지니스 로직 2 실행"));
         contextV2.execute();
+
+        // 람다식을 활용하여 ContextV1 인자에서 바로 생성.
+        // 람다식을 활용할 때는 Strategy 인터페이스에 메서드가 1개 여야만 한다.
     }
 }

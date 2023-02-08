@@ -15,3 +15,5 @@ public class ContextV2 {
         log.info("resultTime = {}", resultTime);
     }
 }
+
+// ContextV1 은 생성자로 주입 받았다면 V2 는 메서드에 파라미터로 Strategy 를 받아 실행한다,
