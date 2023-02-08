@@ -31,3 +31,6 @@ public class OrderControllerV2 {
 
     }
 }
+
+// traceId 유지
+// controller -> service -> repository -> service -> controller 로 level 에 따른 message 와 time 출력.

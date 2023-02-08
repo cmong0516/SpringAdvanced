@@ -10,6 +10,12 @@ public class HelloTraceV2Test {
         TraceStatus status1 = trace.begin("hello1");
         TraceStatus status2 = trace.beginSync(status1.getTraceId(), "hello2");
 
+        // level == 0
+        System.out.println(status1.getTraceId().getLevel());
+        // level == 1
+        System.out.println(status2.getTraceId().getLevel());
+
+
         trace.end(status2);
         trace.end(status1);
     }

@@ -24,8 +24,17 @@ public class HelloTraceV2 {
 
     // V2 Add
     public TraceStatus beginSync(TraceId beforeTraceId,String message) {
+        // TraceId 에는 id, level 이 담겨있다.
 //        TraceId traceId = new TraceId();
+
+//        public TraceId createNextId() {
+//            return new TraceId(id, level + 1);
+//        }
+
+        //createNextId 는 기존 Id 유지 , level += 1
+
         TraceId nextId = beforeTraceId.createNextId();
+
         long startTimeMs = System.currentTimeMillis();
 
         log.info("[{}] {}{}", nextId.getId(), addSpace(START_PREFIX, nextId.getLevel()), message);

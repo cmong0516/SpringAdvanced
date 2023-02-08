@@ -30,3 +30,7 @@ public class OrderControllerV1 {
 
     }
 }
+
+// v1 실행시 message 와 time 이 출력된다.
+// controller -> service -> repository -> service -> controller
+// 하지만 traceId 가 모두 다르고 Level 또한 모두 0 이다.

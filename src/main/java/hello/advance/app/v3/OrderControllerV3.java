@@ -32,3 +32,6 @@ public class OrderControllerV3 {
 
     }
 }
+
+// traceId 가 없으므로 생성.
+// controller -> service -> repository -> service -> controller 잘 싱행됨. id 유지 , level 증가 감소 잘됨.

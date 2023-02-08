@@ -17,6 +17,7 @@ public class FiledLogTrace implements LogTrace{
     @Override
     public TraceStatus begin(String message) {
         syncTraceId();
+        // traceId 를 입력받는것이 아니라 null 이면 생성 , 이미 존재하면 createNextId
 
         TraceId traceId = traceIdHolder;
 
