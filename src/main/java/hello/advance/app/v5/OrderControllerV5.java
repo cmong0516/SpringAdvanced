@@ -31,3 +31,6 @@ public class OrderControllerV5 {
 
     }
 }
+
+// template 는 execute() 를 실행할때 TraceCallback 타입을 인자로 받기 때문에
+// call 메서드를 재정의 해주어야한다.

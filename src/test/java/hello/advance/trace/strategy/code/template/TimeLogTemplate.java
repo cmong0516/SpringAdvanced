@@ -15,3 +15,5 @@ public class TimeLogTemplate {
         log.info("resultTime = {}", resultTime);
     }
 }
+
+// Callback Interface 를 전달받아 구현한 call 메서드를 실행한다.
